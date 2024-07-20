@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="start-game.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <header class="header no-select no-underline">
+        <h1 class="title">ROCK, PAPER OR SCISSORS</h1>
+    </header>
+    
+    <section class="start-game">
+        <div class="start-game__show">
+            <h2 class="welcome">
+                ¡WELCOME TO THE GAME OF ROCK, PAPER OR SCISSORS!
+            </h2>
+            <label for="attempts">Number of attempts:</label>
+            <div class="buttons-welcome">
+                <button class="btn-welcome btn-data" data-attempts="1">1</button>
+                <button class="btn-welcome btn-data" data-attempts="3">3</button>
+                <button class="btn-welcome btn-data" data-attempts="5">5</button>
+                <button class="btn-welcome btn-data" data-attempts="7">7</button>
+                <button class="btn-welcome btn-data" data-attempts="9">9</button>
+            </div>
+            <p>Select Game Mode:</p>
+            <div class="buttons-welcome">
+                <button class="btn-welcome mode-btn" data-mode="computer">Against Computer</button>
+                <button class="btn-welcome mode-btn" data-mode="player">Against Player</button>
+            </div>
+            <button class="start-button">Start Game</button>
+        </div>
+    </section>
+    
+    <div class="container no-select" style="display: none;">
+        <div class="battle">
+            <div class="players player-1 no-select">
+                <p>PLAYER 1</p>
+                <div class="img-container" id="player1-choice"></div>
+                <div class="points" id="player1-score">0</div>
+            </div>
+
+            <div class="vs no-select">VS.</div>
+
+            <div class="players player-2 no-select">
+                <p id="player2-label">PLAYER 2</p>
+                <div class="img-container" id="player2-choice"></div>
+                <div class="points" id="player2-score">0</div>
+            </div>
+        </div>
+
+        <!--Player 1 buttons-->
+        <div id="player1-container" class="buttons-container">
+            <img src="img/rock.png" alt="rock" data-choice="rock" data-player="player1">
+            <img src="img/paper.png" alt="paper" data-choice="paper" data-player="player1">
+            <img src="img/scissors.png" alt="scissors" data-choice="scissors" data-player="player1">
+        </div>
+        
+        <!--Player 2 buttons-->
+        <div id="player2-container" class="buttons-container" style="display: none;">
+            <img src="img/rock.png" alt="rock" data-choice="rock" data-player="player2">
+            <img src="img/paper.png" alt="paper" data-choice="paper" data-player="player2">
+            <img src="img/scissors.png" alt="scissors" data-choice="scissors" data-player="player2">
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <div id="myModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3 class="modal-h3">¡END OF GAME!</h3>
+            <span class="close">&times;</span>
+            <p id="final-result"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

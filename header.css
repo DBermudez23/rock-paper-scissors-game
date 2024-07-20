@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+    box-shadow: 0 0 10px #fff;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    filter: drop-shadow(0 0 15px #fff) drop-shadow(0 0 2px #fff9);
+    letter-spacing: 3px;
+    position: relative;
+    user-select: none;
+}
